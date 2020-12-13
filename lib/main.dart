@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import './RandomWordsView.dart';
+import './IntroductionToWidgetsView.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,13 +25,25 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("MainPage"),
       ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('RandomWordsView Button'),
-          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return RandomWordsView();
-          })),
-        ),
+      body: Column(
+        children: <Widget>[
+          RaisedButton(
+            child: Text('RandomWordsView Button'),
+            onPressed: () =>
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) {
+                      return RandomWordsView();
+                    })),
+          ),
+          RaisedButton(
+            child: Text('IntroductionToWidgetsView Button'),
+            onPressed: () =>
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) {
+                      return IntroductionToWidgetsView();
+                    })),
+          ),
+        ],
       ),
     );
   }

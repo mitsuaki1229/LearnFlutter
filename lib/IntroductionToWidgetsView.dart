@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import './IntroductionToWidgets/MyScaffold.dart';
 import './IntroductionToWidgets/Counter.dart';
+import './IntroductionToWidgets/ShoppingList.dart';
 
 class IntroductionToWidgetsView extends StatelessWidget {
   @override
@@ -7,7 +9,13 @@ class IntroductionToWidgetsView extends StatelessWidget {
     return MaterialApp(
       title: 'Introduction to widgets.',
       home: SafeArea(
-        child: Counter(),
+        child: ShoppingList(
+          products: <Product>[
+            Product(name: 'Eggs'),
+            Product(name: 'Flour'),
+            Product(name: 'Chocolate chips'),
+          ],
+        ),
       ),
     );
   }

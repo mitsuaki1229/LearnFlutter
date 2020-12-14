@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './IntroductionToWidgets/MyScaffold.dart';
+import './IntroductionToWidgets/Counter.dart';
 
 class IntroductionToWidgetsView extends StatelessWidget {
   @override
@@ -7,7 +7,7 @@ class IntroductionToWidgetsView extends StatelessWidget {
     return MaterialApp(
       title: 'Introduction to widgets.',
       home: SafeArea(
-        child: MyScaffold(),
+        child: Counter(),
       ),
     );
   }
